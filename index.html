@@ -1,0 +1,96 @@
+<!DOCTYPE html><!--22161108 전지혜-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Top</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <style>
+        body {
+            height: 3000px;
+            font-family: "Pretendard SemiBold";
+            background-color: #FFFFB3;
+        }
+
+        #scrollTop:hover {text-decoration:none; color:red;}
+        #scrollDown:hover {text-decoration:none; color:red;}
+
+        #scrollTop {
+            width: 50px;
+            height: 50px;
+            background-color: lightgray;
+            border: solid 2px gray;
+            text-align: center;
+            color: gray;
+            line-height: 23px;
+            font-weight: bold;
+            position: fixed;
+            right: 40px;
+            bottom: 80px;
+            cursor: pointer;
+        }
+
+        #scrollDown {
+            width: 50px;
+            height: 50px;
+            background-color: lightgray;
+            border: solid 2px gray;
+            text-align: center;
+            color: gray;
+            line-height: 23px;
+            font-weight: bold;
+            position: fixed;
+            right: 40px;
+            bottom: 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            margin-top: 3500px;
+        }
+
+        #footer_box {
+            width: 1140px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        h1,h2,h3,h4 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>💛스크롤 페이지 이동💛</h1>
+    <h3>페이지의 가장 상단입니다.</h3>
+    <h3>👇오른쪽 하단의 END 버튼을 누르면 하단으로 이동합니다.👇</h3>
+    <aside id="scrollTop">▲<br>TOP</aside>
+    <script>
+        $("#scrollTop").click(function(){
+            console.log("click");
+            $("html, body").animate({scrollTop: 0}, 1000);
+        });
+
+    </script>
+
+    <aside id="scrollDown">END<br>▼</aside>
+    <script>
+        $("#scrollDown").click(function(){
+            console.log("click");
+            $("html, body").animate({scrollTop: 3000}, 1000);
+        });
+
+    </script>
+    
+    <footer>
+      <div id="footer_box">
+        <h2>페이지의 맨 하단입니다.</h2>
+        <h3>☝️오른쪽 하단의 TOP 버튼을 누르면 상단으로 이동합니다.☝️</h3>
+        <h4>22161108 전지혜</h4>
+        </footer>
+</body>
+</html>
